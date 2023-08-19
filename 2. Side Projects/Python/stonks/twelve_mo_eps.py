@@ -141,7 +141,9 @@ for ticker in stock_tickers:
         eps_date, eps_value = twelve_month_eps_diluted_scraper(ticker)
         eps_results[ticker] = (eps_date, eps_value)
     except Exception as e:
-        print(f"Error processing {ticker}: {e}")
+        error_message = f"Error processing {ticker}: {e}"
+        print(error_message)
+        eps_results[ticker] = (error_message, "")  # Store error message in the dictionary
 
 # Print the collected EPS results along with the 12-month EPS date
 for ticker, (eps_date, eps_value) in eps_results.items():
