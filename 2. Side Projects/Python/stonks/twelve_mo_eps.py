@@ -9,7 +9,6 @@ warnings.simplefilter(action='ignore', category=FutureWarning)
 
 # External Libraries
 from bs4 import BeautifulSoup
-import matplotlib.pyplot as plt
 import pandas as pd
 
 # Set the current date for use in the filename
